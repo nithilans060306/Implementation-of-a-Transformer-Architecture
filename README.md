@@ -1,59 +1,79 @@
 ## Title of the Project
-Small description about the project like one below
-The integration of a chatbot within a hostel booking system, aimed at streamlining the reservation process for students and improving the overall user experience.
+
+A comprehensive deep learning project that focuses on building a Transformer model from first principles using PyTorch and evaluating its performance on sequence-to-sequence learning tasks.
 
 ## About
-<!--Detailed Description about the project-->
-Tailored Chatbot for Hostel Booking System is a project designed to integrate a chatbot that leverages advanced natural language processing techniques to understand and respond to user queries to the hostel booking system. Traditional hostel booking processes are often time-consuming and involve manual searches and extensive communication with hostel staff. This project seeks to overcome these challenges by creating an easy-to-use chatbot interface that assists students in addressing inquiries.
+
+This project presents a detailed implementation of the Transformer architecture using the PyTorch deep learning framework. Transformers have revolutionized sequence modeling by eliminating recurrence and convolution in favor of self-attention mechanisms, enabling efficient parallel computation and effective modeling of long-range dependencies.
+
+The primary objective of this project is to bridge the gap between theoretical understanding and practical implementation of Transformers. Instead of relying on high-level APIs or pre-trained libraries, the model is constructed modularly to clearly demonstrate the role of each architectural component, including self-attention, multi-head attention, positional encoding, encoder–decoder structures, and feed-forward networks.
+
+In addition to implementation, the project includes a thorough experimental evaluation that analyzes training behavior, convergence characteristics, and overall model performance. This work serves as both a learning resource and a reproducible reference for researchers and students interested in attention-based sequence modeling.
 
 ## Features
-<!--List the features of the project as shown below-->
-- Implements advance neural network method.
-- A framework based application for deployment purpose.
-- High scalability.
-- Less time complexity.
-- A specific scope of Chatbot response model, using json data format.
+
+- From-scratch implementation of Transformer architecture using PyTorch
+
+- Modular design covering encoder, decoder, and attention components
+
+- Scaled dot-product self-attention and multi-head attention mechanisms
+
+- Positional encoding for sequence order preservation
+
+- GPU-compatible and highly parallelized training pipeline
+
+- Experimental performance analysis with loss and convergence evaluation
+
+- Easily extendable for larger datasets and advanced decoding strategies
 
 ## Requirements
-<!--List the requirements of the project as shown below-->
-* Operating System: Requires a 64-bit OS (Windows 10 or Ubuntu) for compatibility with deep learning frameworks.
-* Development Environment: Python 3.6 or later is necessary for coding the sign language detection system.
-* Deep Learning Frameworks: TensorFlow for model training, MediaPipe for hand gesture recognition.
-* Image Processing Libraries: OpenCV is essential for efficient image processing and real-time hand gesture recognition.
-* Version Control: Implementation of Git for collaborative development and effective code management.
-* IDE: Use of VSCode as the Integrated Development Environment for coding, debugging, and version control integration.
-* Additional Dependencies: Includes scikit-learn, TensorFlow (versions 2.4.1), TensorFlow GPU, OpenCV, and Mediapipe for deep learning tasks.
+
+- **Operating System:** 64-bit Windows 10 / Ubuntu  
+- **Programming Language:** Python 3.8 or later  
+- **Deep Learning Framework:** PyTorch  
+- **Supporting Libraries:**  
+  - NumPy  
+  - Matplotlib  
+  - tqdm  
+- **Hardware (Recommended):** CUDA-enabled GPU for faster training  
+- **IDE:** VS Code / PyCharm  
+- **Version Control:** Git  
+
 
 ## System Architecture
-<!--Embed the system architecture diagram as shown below-->
 
-![Screenshot 2023-11-25 133637](https://github.com/<<yourusername>>/Hand-Gesture-Recognition-System/assets/75235455/a60c11f3-0a11-47fb-ac89-755d5f45c995)
+The Transformer model follows an encoder–decoder architecture built entirely on attention mechanisms. The encoder processes the input sequence to generate contextual representations, while the decoder generates the output sequence using masked self-attention and encoder–decoder attention.
 
+![transformerArchitecture](img/transformer_architecture.png)
 
 ## Output
 
-<!--Embed the Output picture at respective places as shown below as shown below-->
-#### Output1 - Name of the output
+#### Output1 - Training and Validation Loss Curve
 
-![Screenshot 2023-11-25 134037](https://github.com/<<yourusername>>/Hand-Gesture-Recognition-System/assets/75235455/8c2b6b5c-5ed2-4ec4-b18e-5b6625402c16)
+Illustrates the convergence behavior of the Transformer model during training, demonstrating stable learning and effective optimization.
 
-#### Output2 - Name of the output
-![Screenshot 2023-11-25 134253](https://github.com/<<yourusername>>/Hand-Gesture-Recognition-System/assets/75235455/5e05c981-05ca-4aaa-aea2-d918dcf25cb7)
+![trainVsVal](img/trainVsValidationCurve.png)
 
-Detection Accuracy: 96.7%
-Note: These metrics can be customized based on your actual performance evaluations.
+#### Output2 - Sample Translation Output
 
+Demonstrates the Transformer model’s ability to perform sequence-to-sequence translation by converting an input sentence from the source language to the target language. The output showcases the model’s capacity to capture contextual meaning and generate coherent translations without relying on recurrent structures.
+
+![translatedOp](img/translatedOutput.png)
+
+BLEU score: 9.425159511373677
 
 ## Results and Impact
-<!--Give the results and impact as shown below-->
-The Sign Language Detection System enhances accessibility for individuals with hearing and speech impairments, providing a valuable tool for inclusive communication. The project's integration of computer vision and deep learning showcases its potential for intuitive and interactive human-computer interaction.
 
-This project serves as a foundation for future developments in assistive technologies and contributes to creating a more inclusive and accessible digital environment.
+The project demonstrates the practical effectiveness of Transformer architectures in sequence modeling tasks. Experimental results confirm that attention-based models outperform traditional recurrent approaches in terms of parallelization, convergence speed, and long-range dependency modeling.
 
-## Articles published / References
-1. N. S. Gupta, S. K. Rout, S. Barik, R. R. Kalangi, and B. Swampa, “Enhancing Heart Disease Prediction Accuracy Through Hybrid Machine Learning Methods ”, EAI Endorsed Trans IoT, vol. 10, Mar. 2024.
-2. A. A. BIN ZAINUDDIN, “Enhancing IoT Security: A Synergy of Machine Learning, Artificial Intelligence, and Blockchain”, Data Science Insights, vol. 2, no. 1, Feb. 2024.
+By implementing the architecture from scratch, this project enhances interpretability and provides deep insight into the internal workings of modern attention-based networks. The work serves as a strong foundation for future research in natural language processing, time-series modeling, and large-scale language models.
 
+This implementation can be extended to advanced applications such as machine translation, text summarization, and domain-specific fine-tuning, making it a valuable educational and research-oriented contribution.
 
+## Articles Published / References
 
+1. Vaswani, A., Shazeer, N., Parmar, N., et al., **Attention Is All You Need**, *Advances in Neural Information Processing Systems (NeurIPS)*, 2017.  
+2. Jay Alammar, **The Illustrated Transformer**, available online.  
+3. PyTorch Documentation, https://pytorch.org/docs/stable/  
+4. Goldberg, Y., **Neural Network Methods for Natural Language Processing**, Morgan & Claypool Publishers.  
 
